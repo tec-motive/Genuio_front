@@ -1,12 +1,14 @@
 const config = {
-	mode: "jit",
-	purge: [
-		"./src/**/*.{html,js,svelte,ts}",
-	],
+	mode: 'jit',
+	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}},
+		constainer: {
+			center: true,
+			padding: '2rem'
+		},
+		extend: {}
 	},
-	plugins: [],
+	plugins: []
 };
 
 module.exports = config;

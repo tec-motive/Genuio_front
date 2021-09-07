@@ -4,9 +4,27 @@
 
 @layer base {
 	h1 {
-		@apply text-2xl;
+		@apply text-2xl font-light;
 	}
+
 	h2 {
 		@apply text-xl;
+	}
+
+	th,
+	td {
+		@apply border-b border-gray-400 px-7 py-4;
+	}
+
+	td {
+		@apply font-light;
+	}
+
+	th {
+		@apply font-semibold;
+	}
+
+	button {
+		@apply border border-gray-300 rounded-lg bg-gray-300 shadow-md hover:bg-gray-400 hover:text-gray-50;
 	}
 }
