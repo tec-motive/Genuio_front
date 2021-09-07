@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	onMount(() => {
 		console.log('session: ', $session);
-		if (!$session.user.email) {
+		if (!$session.user.account) {
 			goto('/login');
 		}
 	});

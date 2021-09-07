@@ -4,7 +4,7 @@
 	import { getStores, navigating, page, session } from '$app/stores';
 	import NavButton from './NavButton.svelte';
 	import { navButtonList } from './data';
-	name.set($session.user.email);
+	name.set($session.user.username);
 </script>
 
 <div class="flex items-center space-x-4 p-2 mb-5">

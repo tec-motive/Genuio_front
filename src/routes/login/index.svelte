@@ -2,8 +2,9 @@
 	import { jwt } from '$lib/shared/stores.js';
 	import { session } from '$app/stores';
 	import { goto } from '$app/navigation';
-	let email = '';
+	let account = '';
 	let password = '';
+
 	async function handleLogin() {
 		//fetch...
 		//jwt.set('abc');
@@ -14,7 +15,7 @@
 			},
 			body: JSON.stringify({
 				user: {
-					email: email,
+					account: account,
 					password: password
 				}
 			})
@@ -46,7 +47,7 @@
 						name="email"
 						type="text"
 						placeholder="E-Mail"
-						bind:value={email}
+						bind:value={account}
 					/>
 				</div>
 				<div class="mb-6">

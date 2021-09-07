@@ -14,7 +14,6 @@ export async function post(request) {
   });
   const res = await body.json();
   */
-	console.log('request: ', request);
 	/*
   const res = {
     body: {
