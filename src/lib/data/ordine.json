@@ -1,0 +1,38 @@
+[
+	{
+		"Produttore": "LKF",
+		"Data_ordine": "5 Apre 2021",
+		"Data_consegna_promiso": "5 Jul 2021",
+		"Numero_dordine": 12345,
+		"Foto": "/src/images/fake.svg",
+		"Articolo": "302_WH_LUX_WHITE",
+		"Quantita_dellordine": 18,
+		"Quantita_di_spedizione": 18,
+		"Quantita_arrivata": 17,
+		"Stato_dellordine": "Fine richiesto"
+	},
+	{
+		"Produttore": "LKF",
+		"Data_ordine": "5 Apre 2021",
+		"Data_consegna_promiso": "5 Jul 2021",
+		"Numero_dordine": 12345,
+		"Foto": "src/images/fake.svg",
+		"Articolo": "302_pk_lux_princess_pink",
+		"Quantita_dellordine": 113,
+		"Quantita_di_spedizione": 0,
+		"Quantita_arrivata": 0,
+		"Stato_dellordine": "Ordine aggiunto"
+	},
+	{
+		"Produttore": "XIA",
+		"Data_ordine": "5 Apre 2021",
+		"Data_consegna_promiso": "5 Jul 2021",
+		"Numero_dordine": 12345,
+		"Foto": "src/images/fake.svg",
+		"Articolo": "302_pk_lux_princess_pink",
+		"Quantita_dellordine": 80,
+		"Quantita_di_spedizione": 0,
+		"Quantita_arrivata": 0,
+		"Stato_dellordine": "Ordine aggiunto"
+	}
+]

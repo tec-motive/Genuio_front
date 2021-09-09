@@ -22,7 +22,8 @@ export async function post(request) {
     }
   }
  */
-	const body = request.body;
+	// const body = request.body;
+	console.log('request:', request);
 
-	return respond(body);
+	return respond(request);
 }

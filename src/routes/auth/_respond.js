@@ -1,4 +1,6 @@
-export function respond(body) {
+export function respond(request) {
+	const { body, user } = request;
+	const { account, password } = body.user;
 	const accountData = [
 		{
 			username: 'doyun',
@@ -15,21 +17,20 @@ export function respond(body) {
 			isAdmin: false
 		}
 	];
-	const { account, password } = body.user;
 
 	if (body.errors) {
 		return { status: 401, body };
 	}
-	console.log('body', body);
-	const json = JSON.stringify(body.user);
-	const value = Buffer.from(json).toString('base64');
 
 	const result = accountData.filter(
 		(user) => user.account === account && user.password === +password
 	);
+	const json = JSON.stringify(result[0]);
+	const value = Buffer.from(json).toString('base64');
 
+	request.locals.user = result[0];
+	console.log('responsd request:', request);
 	body.user = result[0];
-
 	return {
 		headers: {
 			'set-cookie': `jwt=${value}; Path=/; HttpOnly`

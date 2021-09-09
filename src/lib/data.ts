@@ -35,15 +35,13 @@ export const navButtonList = [
 	}
 ];
 
-// interface Account [
-// 	{
+// interface Account {
 // 	username: string;
 // 	email: string;
 // 	account: string;
 // 	password: number;
 // 	isAdmin: boolean;
-// 	}
-// ]
+// }
 
 export const accountData = [
 	{

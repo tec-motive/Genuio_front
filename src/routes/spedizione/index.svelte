@@ -1,4 +1,0 @@
-<script>
-</script>
-
-spedizione page

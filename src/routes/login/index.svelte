@@ -23,6 +23,7 @@
 		const res = await login.json();
 		console.log('res:', res);
 		$session.user = res.user;
+
 		goto('/');
 	}
 </script>

@@ -23,41 +23,62 @@ export const navButtonList = [
 		svgPathD: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4'
 	},
 	{
-		name: 'Spedizione',
-		link: '/spedizione',
-		svgPathD:
-			'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
-	},
-	{
 		name: 'Mio account',
 		link: '/mio-account',
 		svgPathD: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
 	}
 ];
 
-// interface Account [
-// 	{
-// 	username: string;
-// 	email: string;
-// 	account: string;
-// 	password: number;
-// 	isAdmin: boolean;
-// 	}
-// ]
-
-export const accountData = [
+export const accountPageInfo = [
 	{
-		username: 'doyun',
-		email: 'materokatti@gmail.com',
-		account: 'Mateo',
-		password: 1234,
-		isAdmin: true
+		id: 1,
+		Tipo: 'genuio',
+		Nome: 'GENUIO Paul',
+		Email: 'pyosoon.park@genu.io',
+		Account: 'paul',
+		Password: 12345
 	},
 	{
-		username: 'hyeonjun',
-		email: 'xia@gmail.com',
-		account: 'xia',
-		password: 1234,
-		isAdmin: false
+		id: 2,
+		Tipo: 'manufacturer',
+		Nome: 'Doyun',
+		Email: 'doyun@genu.io',
+		Account: 'doyun',
+		Password: 12345
+	},
+	{
+		id: 3,
+		Tipo: 'manufacturer',
+		Nome: 'mateo',
+		Email: 'mateo@genu.io',
+		Account: 'mateo',
+		Password: 12345
+	}
+];
+
+export const prodottoPageInfo = [
+	{
+		id: 1,
+		Foto: '/src/images/fake.svg',
+		Articolo: '30_WH_LUX_WHITE',
+		Produttore: 'LKF',
+		Tempo_inserisci: '2021-07-07 13:00:01',
+		Tempo_modificare: '2020-07-07 13:00:01'
+	},
+	{
+		id: 2,
+		Foto: '/src/images/fake.svg',
+		Articolo: '20_WH_LUX_WHITE',
+		Produttore: 'JFK',
+		Tempo_inserisci: '2021-07-07 12:00:01',
+		Tempo_modificare: '2020-07-07 13:00:01'
+	},
+	{
+		id: 3,
+		Foto: '/src/images/fake.svg',
+		Articolo: '130_WH_LUX_WHITE',
+		Produttore: 'KFC',
+		Tempo_inserisci: '2020-07-07 13:00:01',
+		Tempo_modificare: '2020-07-07 13:00:01'
 	}
 ];
