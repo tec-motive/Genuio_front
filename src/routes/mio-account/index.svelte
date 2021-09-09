@@ -12,17 +12,20 @@
 
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { postFetch } from '$lib/fetch';
 	export let mioAccountData: object;
 	let isModificareOn: boolean = false;
-	let username;
-	let email;
-	let account;
 
 	const toggleModificare = () => (isModificareOn = !isModificareOn);
 	const updateAccount = () => {
-		console.log('update');
+		console.log(updateData);
+		postFetch(updateData, API);
 		toggleModificare();
 	};
+
+	let updateData = mioAccountData;
+
+	console.log('updateData', updateData);
 </script>
 
 <div class="container flex flex-col justify-center items-center space-y-20 mt-20">
@@ -40,7 +43,7 @@
 				<th>{key}</th>
 				{#if isModificareOn}
 					<td>
-						<input class="p-1 " type="text" {value} />
+						<input class="p-1 " type="text" bind:value={updateData[key]} />
 					</td>
 				{:else}
 					<td class="py-5 px-10">
