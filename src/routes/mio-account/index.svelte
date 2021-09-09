@@ -1,22 +1,41 @@
-<script>
-	import { session } from '$app/stores';
+<script context="module">
+	import { API } from '$lib/api';
+	export async function load({ page, fetch, session, context }) {
+		const response = await fetch(API.MIO_ACCOUNT);
+		const result = await response.json();
+		const mioAccountData = result;
+		return {
+			props: { mioAccountData }
+		};
+	}
+</script>
+
+<script lang="ts">
 	import { goto } from '$app/navigation';
-	import { linear } from 'svelte/easing';
-	import { blur, fade, fly, scale, slide } from 'svelte/transition';
-	const { username, account, password, email } = $session.user;
-	console.log('here session', $session.user);
-	let isModificareOn = false;
+	export let mioAccountData: object;
+	let isModificareOn: boolean = false;
+	let username;
+	let email;
+	let account;
+
 	const toggleModificare = () => (isModificareOn = !isModificareOn);
-	let transitionOption = { duration: 500, easing: linear };
+	const updateAccount = () => {
+		console.log('update');
+		toggleModificare();
+	};
 </script>
 
 <div class="container flex flex-col justify-center items-center space-y-20 mt-20">
 	<div class="flex">
 		<h1 class="pr-40">My Account</h1>
-		<button class="font-semibold px-2 " on:click={toggleModificare}>Modificare</button>
+		{#if isModificareOn}
+			<button class="font-semibold px-7" on:click={updateAccount}>Salva</button>
+		{:else}
+			<button class="font-semibold px-2 " on:click={toggleModificare}>Modificare</button>
+		{/if}
 	</div>
 	<table>
-		{#each Object.entries($session.user) as [key, value]}
+		{#each Object.entries(mioAccountData) as [key, value]}
 			<tr>
 				<th>{key}</th>
 				{#if isModificareOn}
@@ -25,9 +44,7 @@
 					</td>
 				{:else}
 					<td class="py-5 px-10">
-						<p>
-							{value}
-						</p>
+						<p>{value}</p>
 					</td>
 				{/if}
 			</tr>
